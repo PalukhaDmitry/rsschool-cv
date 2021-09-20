@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(53, 53, 65);
+    color: white;
+}
+.papapa {
+    max-width: 900px;
+    margin: 0 auto;
+}
+h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.856);
+}
