@@ -6,11 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dmitry Palukha CV</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="highlight/styles/a11y-light.min.css">
+        <script src="highlight/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
     </head>
     <body>
         <div class="papapa">
-            <nav class="menu">
-                <ul id="menu-list">
+            <nav class="nav-menu">
+                <button id="top-nav-button" class="nav-button" type="button" onclick="toggleNavMenu()"></button>
+                <ul id="top-nav-menu-list" class="nav-menu-list">
                     <li>
                         <a href="#contacts">Contacts</a>
                     </li>
@@ -27,18 +32,18 @@
                         <a href="#languages">Languages</a>
                     </li>
                     <li>
-                        <a href="#code_example">Code emample</a>
+                        <a href="#code_example">Code example</a>
                     </li>
                 </ul> 
             </nav>
             <header>
-                <div class="ava">
+                <div class="avatar">
                     <figure>
                         <img src="images/avatar.PNG" alt="avatar.PNG" width="150" height="150" />
                     </figure>
                 </div>
-                <div class="podpisa">
-                    <h1>Hello, I'm Dmitry</h1>
+                <div class="welcome">
+                    <h1>Hello, I'm <span class="name">Dmitry</span></h1>
                     <h2>Front-End Developer</h2>
                 </div>
             </header>
@@ -46,10 +51,16 @@
                <div class="zagolovoki">
                    <section id="contacts">
                        <h3>CONTACTS</h3>
-                       <ul>
-                           <li>Molodechno, Belarus</li>
-                           <li>DiWeis46@gmail.com</li>
-                           <li>DayWiss#2256</li>
+                       <ul class="contact-list">
+                           <li>
+                               <img src="images/karta.png" height="18" alt="coordinates"/> Molodechno, Belarus
+                            </li>
+                           <li>
+                               <img src="images/email.PNG" height="16" alt="coordinates"/>DiWeis46@gmail.com
+                           </li>
+                           <li>
+                               <img src="images/discord.PNG" height="14" alt="coordinates"/>DayWiss#2256
+                           </li>
                        </ul>
                    </section>
                    <section id="about_me">
@@ -63,9 +74,9 @@
                    </section>
                    <section id="education">
                        <h3>EDUCATION</h3>
-                       <p>Belarusian National Technical University</p>
+                       <h4>Belarusian National Technical University</h4>
                        <p>Marketing, Management And Entrepreneurship</p>
-                       <p>Graduated June 2015</p>
+                       <p><i>Graduated June 2015</i></p>
                    </section>
                    <section id="skills">
                        <h3>SKILLS</h3>
@@ -80,21 +91,29 @@
                    <section id="languages">
                        <h3>LANGUAGES</h3>
                        <ul>
-                           <li>English</li>
-                           <li>Russian</li>
+                           <li>English <span class="name">B1 (Intermediate)</span></li>
+                           <li>Russian <span class="name">Native</span></li>
                        </ul>
                    </section>
                    <section id="code_example">
                        <h3>CODE EXAMPLE</h3>
+                       <pre><code class="language-javascript">
+                            function squareDigits(num){
+                                var string = num.toString();
+                                var results = [];
+                                for (var i = 0; i < string.length; i++){
+                                results[i] = string[i] * string[i];
+                                }
+                                return Number(results.join(''));
+                            };
+                        </code></pre>
                    </section>
                </div> 
             </main>
-            <footer>
-                <div>
-                    <a href="https://rs.school/js/"><img src="images/rs_school_js.svg" height="26" alt="JS Course · Rolling Scopes School" title="JS Course · Rolling Scopes School" /></a>
-                    <time>2021</time>
-                    <a href="https://github.com/PalukhaDmitry"><img src="images/github.png" height="26" alt="My GitHub" title="My GitHub" /></a>
-                </div>
+            <footer class="footer">
+                    <a href="https://rs.school/js/"><img src="images/rs_school_js.svg" height="28" class="rsschool" alt="JS Course · Rolling Scopes School" title="JS Course · Rolling Scopes School" /></a>
+                    <time class="time">2021</time>
+                    <a href="https://github.com/PalukhaDmitry"><img src="images/github.png" height="28" class="git" alt="My GitHub" title="My GitHub" /></a>
             </footer>
         </div>
     </body>
